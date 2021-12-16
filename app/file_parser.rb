@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 # frozen_string_literal: true
 
-require './line_parser'
-require './validators'
+require_relative 'line_parser'
+require_relative 'validators'
 
 # this is the FileParser class which takes the path from the main class and processes file
 # line by line and compiles a results hash as it itterates through the lines.

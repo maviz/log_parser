@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # frozen_string_literal: true
 
-require './validators'
+require_relative 'validators'
 
 # this is the line parser class responsible for parsing a line from logs and
 # making changes to the result hash accordingly. result hash is like an accumulator initialized and kept
