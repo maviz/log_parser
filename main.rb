@@ -8,8 +8,7 @@ require './result_logger'
 # and passing args to it. Validation is done on file argument and file contents line by line.
 class Main
   def self.execute(args)
-    parser = FileParser.new(args: args, seperator: ' ')
-    ResultLogger.new(parser: parser)
+    FileParser.new(args: args, seperator: ' ', logger: ResultLogger)
   end
 end
 

@@ -18,8 +18,18 @@ I assume that you have git cloned the repo.
 You can run the script directly from bash by running
 `./main.rb [path_to_log_file]` e.g `./main.eb webserver.log`
 
-For test coverage, Rspec has been added and a spec written to cover the validations and calculations.
+For test coverage, Rspec has been added and specs are written to test the validations and calculations.
 to run the test, you will need to run `bundle install` first so that rspec and rake could be installed.
 A rakefile is added so that we can run the specs via rake by running
 `bundle exec rake spec`
+
+
+# Rubocop
+you can also test rubocop by running `rubocop` in the project directory after `bundle install`.
+
+
+# Ruby version
+Gemfile has no mention of ruby version so any stable version could be used, I hope you won't use a very old one as I havn't tested on < 2 ruby version.
+
+
 

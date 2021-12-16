@@ -18,7 +18,7 @@ describe 'test line parser with in valid ip' do
   let(:result) { { invalid_ip: { error: true, linenos: [1] } } }
 
   it 'expects valid results for a valid line' do
-    expect(LineParser.new(result: {}, line: test_line, lineno: 1).result.has_key?(:invalid_ip)).to eq(true)
+    expect(LineParser.new(result: {}, line: test_line, lineno: 1).result.key?(:invalid_ip)).to eq(true)
     expect(LineParser.new(result: {}, line: test_line, lineno: 1).result).to eq(result)
   end
 end
@@ -28,7 +28,7 @@ describe 'test line parser with a blank line' do
   let(:result) { { blank_line: { error: true, linenos: [1] } } }
 
   it 'expects valid results for a valid line' do
-    expect(LineParser.new(result: {}, line: test_line, lineno: 1).result.has_key?(:blank_line)).to eq(true)
+    expect(LineParser.new(result: {}, line: test_line, lineno: 1).result.key?(:blank_line)).to eq(true)
     expect(LineParser.new(result: {}, line: test_line, lineno: 1).result).to eq(result)
   end
 end
