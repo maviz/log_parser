@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'English'
+
 # this is the validation module, included in file and line parser, this gives these classes
 # the valid? function
 # while validating line, we keep track of the line number show that when logging error so we know
@@ -75,7 +77,7 @@ module Validator
 
   def init_count(key)
     result[key][:linenos] ||= []
-    result[key][:linenos].push(@lineno)
+    result[key][:linenos].push(lineno || $INPUT_LINE_NUMBER)
     result[key][:error] = true
   end
 

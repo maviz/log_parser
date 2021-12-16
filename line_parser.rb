@@ -10,10 +10,11 @@ class LineParser
   include Validator
   attr_accessor :line, :seperator, :result, :lineno
 
-  def initialize(result:, line:, seperator: ' ')
+  def initialize(result:, line:, seperator: ' ', lineno: nil)
     @seperator = seperator
     @line = line
     @result = result
+    @lineno = lineno
     process_line
   end
 
