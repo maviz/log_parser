@@ -54,7 +54,7 @@ module Validator
     if args.empty? || no_file? || invalid_format?
       result[:error] = 'No arguments passed.' if args.empty?
       result[:error] = 'The log file doesn\'t exists.' if no_file?
-      result[:error] = 'The file is not a valid log file' if invalid_format?
+      result[:error] = 'The file is not a valid log file.' if invalid_format?
       false
     else
       true
@@ -75,7 +75,7 @@ module Validator
 
   def init_count(key)
     result[key][:linenos] ||= []
-    result[key][:linenos].push($INPUT_LINE_NUMBER)
+    result[key][:linenos].push(@lineno)
     result[key][:error] = true
   end
 
