@@ -16,7 +16,7 @@ After the file is read, A ResutLogger class is given the parser object to displa
 I assume that you have git cloned the repo.
 
 You can run the script directly from bash by running
-`./main.rb [path_to_log_file]` e.g `./main.eb webserver.log`
+`./main.rb [path_to_log_file]` e.g `./main.rb webserver.log`
 
 For test coverage, Rspec has been added and specs are written to test the validations and calculations.
 to run the test, you will need to run `bundle install` first so that rspec and rake could be installed.
